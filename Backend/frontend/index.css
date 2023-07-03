@@ -97,15 +97,15 @@ body {
 .lyricsContainer {
     /* Make some room for the lyrics from the title */
     padding-top: 80px;
-	text-align: center;
+    text-align: center;
 }
 
 .lyricsSpan {
     /* Set lyrics font, size, color, and style */
     font-family: 'nanum-gothic-light';
-	font-size: 2.5vw; /*50pt*/
-	color: white;
-	font-style: italic;
+    font-size: 2.5vw; /*50pt*/
+    color: white;
+    font-style: italic;
 }
 
 .lyricsSpacer {
@@ -116,35 +116,35 @@ body {
 .controlsContainer {
     /* Add room between the lyrics / album art and the controls / progress bar */
     padding-top: 120px;
-	width: 100%;
+    width: 100%;
 }
 
 .progressBarContainer {
     /* Add an empty gray progress bar, with rounded corners */
     width: 100%;
-	height: 10px;
-	background-color: rgba(191, 191, 191, 1);
-	position: relative;
-	border-radius: 5px;
+    height: 10px;
+    background-color: rgba(191, 191, 191, 1);
+    position: relative;
+    border-radius: 5px;
 }
 
 .progressedContainer {
     /* Add the progress to the progress bar */
     position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0%; /* Current progress */
-	background-color: rgba(255, 0, 0, 1); /* Red looks really cool, was white */
-	border-radius: 5px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%; /* Current progress */
+    background-color: rgba(255, 0, 0, 1); /* Red looks really cool, was white */
+    border-radius: 5px;
 }
 
 /* Add controls, and order them across the screen */
 .buttonsContainer {
     display: flex;
-	padding-top: 75px;
-	width: 100%;
-	justify-content: space-between;
+    padding-top: 75px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .buttonsContainer #playlistButton {
@@ -157,16 +157,16 @@ body {
 
 .middleButtonsContainer {
     display: flex;
-	gap: 100px;
-	order: 2;
+    gap: 100px;
+    order: 2;
 }
 
 .footer {
     /* Add a footer in the bottom right of the screen */
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	font-family: 'nanum-gothic-light';
-	font-size: 25px;
-	color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: 'nanum-gothic-light';
+    font-size: 25px;
+    color: white;
 }
