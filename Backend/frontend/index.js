@@ -37,11 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function hideCursor() {
+    let timeoutVar;
     function resetCursorTimer() {
-        clearTimeout(timeoutId);
+        clearTimeout(timeoutVar);
         document.body.classList.remove('hideCursor');
         
-        timeoutId = setTimeout(() => {
+        timeoutVar = setTimeout(() => {
             document.body.classList.add('hideCursor');
         }, cursorTimeout);
       }
