@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>마렉시트 오디오플레어</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script type="module" src="index.js"></script>
+    </head>
+    <body>
+        <div id="audioPlayerContainer">
+            <audio id="audioPlayer" controls></audio>
+        </div>
+
+        <div class="blurContainer">
+            <div class="panelContainer">
+                <div id="albumArtContainer" class="albumArtContainer">
+                    <img id="albumArt" class="albumArt"></img>
+                </div>
+
+                <div class="textContainer">
+                    <div class="titleContainer">
+                        <span id="titleSpan">제목없어</span>
+                    </div>
+                    <div class="artistContainer">
+                        <span id="artistSpan">아티스트 없어</span>
+                    </div>
+                    <div class="lyricsContainer">
+                        <span id="lyricsA" class="lyricsSpan">가사없어</span>
+                        <div class="lyricsSpacer"></div>
+                        <span id="lyricsB" class="lyricsSpan">가사없어</span>
+                    </div>
+                </div>
+
+                <div class="controlsContainer">
+                    <div id="progressBarContainer" class="progressBarContainer">
+                        <div id="progressedContainer" class="progressedContainer"></div>
+                    </div>
+                    <div class="buttonsContainer">
+                        <img id="playlistButton" src="Images/btn_playlist.png">
+
+                        <div class="middleButtonsContainer">
+                            <img id="backButton" src="Images/btn_rw.png" alt="10초 전">
+                            <img id="pauseButton" src="Images/btn_play.png">
+                            <img id="fastForwardButton" src="Images/btn_ff.png" alt="10초 후">
+                        </div>
+
+                        <img id="volumeButton" src="Images/btn_volume.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <span>마렉스티 / 고은별 2023</span>
+            </div>
+        </div>
+    </body>
+</html>
