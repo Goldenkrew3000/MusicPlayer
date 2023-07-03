@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // DOM is loaded
     log("DOM is loaded.");
 
+    // Run function to hide cursor
+    hideCursor();
+
     // Launch website
     websiteHandler();
 });
