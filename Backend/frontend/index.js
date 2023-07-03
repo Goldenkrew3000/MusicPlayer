@@ -6,6 +6,7 @@ var gSpotifyUrl = "https://open.spotify.com/track/0Q5VnK2DYzRyfqQRJuUtvi?si=45c2
 // Settings
 var currentVolume = 0.5;
 var playlistMode = 0; // 0 is single song mode, 1 is playlist mode
+var cursorTimeout = 2000;
 
 // Storage
 var arrayTime = new Array();
@@ -31,6 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Launch website
     websiteHandler();
 });
+
+async function hideCursor() {
+    function resetCursorTimer() {
+        clearTimeout(timeoutId);
+        document.body.classList.remove('hideCursor');
+        
+        timeoutId = setTimeout(() => {
+            document.body.classList.add('hideCursor');
+        }, cursorTimeout);
+      }
+
+    document.addEventListener('mousemove', resetCursorTimer);
+    document.addEventListener('keydown', resetCursorTimer);
+}
 
 async function websiteHandler() {
     USER_PlayUrl = prompt("Enter playlist/album/song url: ");

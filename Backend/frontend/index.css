@@ -170,3 +170,7 @@ body {
     font-size: 25px;
     color: white;
 }
+
+.hideCursor {
+    cursor: none;
+}
