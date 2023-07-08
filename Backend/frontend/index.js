@@ -32,9 +32,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run function to hide cursor
     hideCursor();
 
+    // Read volume
+    readVolCookie();
+
     // Launch website
     websiteHandler();
 });
+
+function createVolCookie() {
+    var cookieExpire = "Fri, 1 Jan 2038 12:00:00 UTC";
+    var cookie = `volume=${currentVolume}; expires=${cookieExpire}`;
+    document.cookie = cookie;
+    log("Created volume cookie");
+}
+
+function readVolCookie() {
+    var cookie = decodeURIComponent(document.cookie)
+    cookie = cookie.split(';');
+    if (cookie[0] != "") {
+        cookie = cookie[0];
+        cookie = cookie.split('=');
+        cookie = cookie[1];
+        currentVolume = cookie;
+    } else {
+        log("No volume cookie found");
+        createVolCookie();
+    }
+}
 
 async function hideCursor() {
     let timeoutVar;
@@ -217,6 +241,7 @@ async function runWebsite(SpotifyURL) {
         var userVolume = prompt("Volume (0 - 1): ");
         audioPlayer.volume = userVolume;
         currentVolume = userVolume;
+        createVolCookie();
     };
     volumeButton.addEventListener('click', volumeButtonHandler);
 
